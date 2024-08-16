@@ -1,0 +1,16 @@
+Feature: Checkout Process
+
+Scenario: Successful Checkout
+  Given I have a product in my cart
+  When I proceed to checkout
+  And I enter valid shipping details
+  And I choose a payment method
+  Then I should see a confirmation of my order
+
+Scenario: Checkout with Invalid Payment Details
+  Given I have a product in my cart
+  When I proceed to checkout
+  And I enter invalid payment details
+  Then I should see an error message
+
+[Add 8 more scenarios here]

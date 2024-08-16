@@ -1,0 +1,15 @@
+Bug 1: Incorrect Total Price Calculation
+
+Scenario: Total Price Calculation Error
+  Given I have multiple items in my cart
+  When I proceed to checkout
+  Then the total price should reflect the correct sum of the items
+  But the total price is incorrect
+
+Bug 2: Missing "Place Order" Button
+
+Scenario: Unable to Place Order
+  Given I am on the checkout page
+  When I enter all required details
+  Then I should see a "Place Order" button
+  But the "Place Order" button is missing
